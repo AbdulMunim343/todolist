@@ -2,6 +2,7 @@ import './App.scss';
 import  { useState } from "react"
 import  React  from 'react';
 import { AiOutlinePlus } from "react-icons/ai";
+import { MdDelete } from "react-icons/md"
 
 const App = () =>{
  const [inp, setinp] = useState("");
@@ -18,6 +19,11 @@ const addList = () =>{
   setinp("");
 }
 
+const deletItems = () => {
+  console.log("hello deleted");
+}
+
+
   return (
     <>
     <div className="mainCon">
@@ -33,9 +39,13 @@ const addList = () =>{
         {items.map((itemVal) => {
             return(
             <>
-            <li>{itemVal}</li>
+           <div className="icncon">
+              <MdDelete className="icn" onClick={deletItems}/>
+              <li>{itemVal}</li>
+           </div>
+            
             </>
-              )
+            )
         })}
         </ul>
     </div>

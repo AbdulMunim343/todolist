@@ -67,3 +67,18 @@ li{
   color: white;
   text-transform: capitalize;
 }
+
+.icncon{
+  display: flex;
+  align-items: center;
+
+  .icn{
+    color:orange;
+    margin-right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  &:hover{
+    color: red;
+  }
+  }
+}
